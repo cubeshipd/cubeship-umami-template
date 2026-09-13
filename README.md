@@ -10,8 +10,7 @@ needs.
 ## What it creates
 
 - **web** — the Umami dashboard and tracking endpoint, from
-  `ghcr.io/umami-software/umami:postgresql-v2`, answering on the domain you
-  choose.
+  `ghcr.io/umami-software/umami:3.3.1`, answering on the domain you choose.
 - **umami-db** — a managed Postgres 18 database, attached to the app, so
   `DATABASE_URL` is set for you.
 
@@ -28,7 +27,17 @@ needs.
 2. **Change that password straight away** under *Settings → Profile*.
 3. Add a website and paste the tracking snippet into your site.
 
+## Two-factor authentication
+
+Umami only offers it with `TWO_FACTOR_ENCRYPTION_KEY` set to 64 hex
+characters, which this template cannot generate. To turn it on, add the
+variable to the `web` app yourself and redeploy:
+
+```bash
+openssl rand -hex 32
+```
+
 ## Resources
 
-The app is limited to 1 CPU and 1 GiB of memory, which is comfortable for a
-few million page views a month. Raise `limits` in `template.yaml` for more.
+The app is limited to 1 CPU and 1 GiB of memory. Raise `limits` in
+`template.yaml` if your traffic needs more.

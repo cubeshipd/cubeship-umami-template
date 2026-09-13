@@ -1,38 +1,36 @@
 # yaml-language-server: $schema=https://cubeship.dev/schema/template/v1.json
 version: 1
 minCubeship: "0.6.0"
-project: umami            # suggested slug; the installer may change it
+project: umami
 
-inputs:                   # what the template cannot know
+inputs:
   - key: domain
     type: domain
     label: Where the dashboard answers
   - key: appSecret
     type: secret
     label: The app's session secret
-    generate: 32          # the instance generates it and shows it once
+    generate: 32
 
 databases:
-  - key: db               # template-local; what references name
-    name: umami-db        # suggested instance name, renamable at install
+  - key: db
+    name: umami-db
     engine: postgres
     version: "18"
-    database: umami       # the password is generated, never written here
+    database: umami
 
 apps:
   - key: web
     name: web
     image: ghcr.io/umami-software/umami
-    tag: postgresql-v2
+    # Umami 3 runs on Postgres only, so there is no DATABASE_TYPE to set.
+    tag: "3.3.1"
     port: 3000
     health: /api/heartbeat
     domains:
       - host: ${input.domain}
     attach:
-      - database: db      # contributes DATABASE_URL and friends
-        prefix: ""
+      - database: db
     limits: { cpu: 1, memory: 1Gi }
-    scale: 1
     env:
       APP_SECRET: ${input.appSecret}
-      DATABASE_TYPE: postgresql
