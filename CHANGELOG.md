@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/cubeshipd/cubeship-umami-template/compare/v1.1.0...v1.1.1) (2026-09-13)
+
+
+### Bug Fixes
+
+* use Umami's own icon ([d9a484b](https://github.com/cubeshipd/cubeship-umami-template/commit/d9a484b1d08c60339c0ab055195ef8ccf32d6a34))
+
 ## [1.1.0](https://github.com/cubeshipd/cubeship-umami-template/compare/v1.0.0...v1.1.0) (2026-09-13)
 
 
