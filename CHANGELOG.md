@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/cubeshipd/cubeship-umami-template/compare/v1.1.1...v1.2.0) (2026-09-17)
+
+
+### Features
+
+* update ghcr.io/umami-software/umami docker tag to v3.4.0 ([#4](https://github.com/cubeshipd/cubeship-umami-template/issues/4)) ([26f85f6](https://github.com/cubeshipd/cubeship-umami-template/commit/26f85f67c68722ccab506cdb21c9093c5023481f))
+
+
+### Bug Fixes
+
+* cut a release when the upstream app updates ([038a504](https://github.com/cubeshipd/cubeship-umami-template/commit/038a5042eea27232aae18305b4877463d959b870))
+
 ## [1.1.1](https://github.com/cubeshipd/cubeship-umami-template/compare/v1.1.0...v1.1.1) (2026-09-13)
 
 
