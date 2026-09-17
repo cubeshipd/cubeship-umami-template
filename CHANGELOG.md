@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/cubeshipd/cubeship-umami-template/compare/v1.1.1...v1.1.2) (2026-09-17)
+
+
+### Bug Fixes
+
+* cut a release when the upstream app updates ([038a504](https://github.com/cubeshipd/cubeship-umami-template/commit/038a5042eea27232aae18305b4877463d959b870))
+
 ## [1.1.1](https://github.com/cubeshipd/cubeship-umami-template/compare/v1.1.0...v1.1.1) (2026-09-13)
 
 
